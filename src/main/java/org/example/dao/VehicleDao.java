@@ -12,10 +12,18 @@ import java.time.LocalDate;
 import java.util.List;
 
 public class VehicleDao {
+
     public static void createVehicle(CreateVehicleDto vehicleDto) {
         try(Session session = SessionFactoryUtil.getSessionFactory().openSession()) {
             Transaction transaction = session.beginTransaction();
-            session.save(vehicleDto);
+
+            Vehicle vehicle = new Vehicle();
+            vehicle.setPlate(vehicleDto.getPlate());
+            vehicle.setVehicleType(vehicleDto.getType());
+            vehicle.setCompany(vehicleDto.getCompany());
+            vehicle.setCreatedAt(LocalDate.now());
+
+            session.save(vehicle);
             transaction.commit();
         }
     }
@@ -36,7 +44,9 @@ public class VehicleDao {
         try(Session session = SessionFactoryUtil.getSessionFactory().openSession()) {
             Transaction transaction = session.beginTransaction();
             vehicles = session
-                    .createQuery("Select v from Vehicle v", Vehicle.class)
+                    .createQuery(
+                            "SELECT v FROM Vehicle v " +
+                                    "WHERE v.deletedAt IS NULL", Vehicle.class)
                     .getResultList();
             transaction.commit();
         }
@@ -50,8 +60,9 @@ public class VehicleDao {
             Transaction transaction = session.beginTransaction();
             vehicles = session
                     .createQuery(
-                            "Select v from Vehicle v" +
-                                    " where v.company.id = :companyId",
+                            "SELECT v FROM Vehicle v " +
+                                    "WHERE v.company.id = :companyId " +
+                                    "AND v.deletedAt IS NULL",
                             Vehicle.class)
                     .setParameter("companyId", companyId)
                     .getResultList();
@@ -67,8 +78,9 @@ public class VehicleDao {
             Transaction transaction = session.beginTransaction();
             routes = session
                     .createQuery(
-                            "Select r from Route r" +
-                                    " where r.vehicle.id = :vehicleId",
+                            "SELECT r FROM Route r " +
+                                    "WHERE r.vehicle.id = :vehicleId " +
+                                    "AND r.deletedAt IS NULL",
                             Route.class)
                     .setParameter("vehicleId", vehicleId)
                     .getResultList();
@@ -82,7 +94,9 @@ public class VehicleDao {
         try (Session session = SessionFactoryUtil.getSessionFactory().openSession()) {
             Transaction transaction = session.beginTransaction();
             session.createQuery(
-                            "UPDATE Vehicle v SET v.plate = :plate WHERE v.id = :id")
+                            "UPDATE Vehicle v SET v.plate = :plate " +
+                                    "WHERE v.id = :id " +
+                                    "AND v.deletedAt IS NULL")
                     .setParameter("plate", updateVehicleDto.getPlate())
                     .setParameter("id", updateVehicleDto.getId())
                     .executeUpdate();
@@ -95,7 +109,8 @@ public class VehicleDao {
         try (Session session = SessionFactoryUtil.getSessionFactory().openSession()) {
             Transaction transaction = session.beginTransaction();
             session.createQuery(
-                            "UPDATE Vehicle v SET v.deleted_at = :deleteDate WHERE v.id = :id")
+                            "UPDATE Vehicle v SET v.deletedAt = :deleteDate " +
+                                    "WHERE v.id = :id")
                     .setParameter("deleteDate", deleteDate)
                     .setParameter("id", vehicleId)
                     .executeUpdate();

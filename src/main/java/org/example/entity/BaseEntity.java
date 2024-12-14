@@ -13,7 +13,7 @@ public class BaseEntity {
     @Column(name = "created_at", nullable = false)
     private LocalDate createdAt;
 
-    @Column(name = "deleted_at", nullable = false)
+    @Column(name = "deleted_at")
     private LocalDate deletedAt;
 
     public BaseEntity() {
@@ -27,7 +27,10 @@ public class BaseEntity {
     public long getId() {
         return id;
     }
-    public void setId(long id) {
-        this.id = id;
-    }
+    public LocalDate getCreatedAt() { return createdAt; }
+    public LocalDate getDeletedAt() { return deletedAt; }
+
+    public void setId(long id) { this.id = id; }
+    public void setCreatedAt(LocalDate createdAt) { this.createdAt = createdAt; }
+    public void setDeletedAt(LocalDate deletedAt) { this.deletedAt = deletedAt; }
 }

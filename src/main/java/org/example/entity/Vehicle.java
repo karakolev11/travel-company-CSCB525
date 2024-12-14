@@ -49,6 +49,9 @@ public class Vehicle extends BaseEntity {
     public void setRoutes(Set<Route> routes) {
         this.routes = routes;
     }
+    public void setCompany(Company company) {
+        this.company = company;
+    }
 
     //Methods
     @Override

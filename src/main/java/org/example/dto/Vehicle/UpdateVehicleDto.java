@@ -1,8 +1,14 @@
 package org.example.dto.Vehicle;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Positive;
+
 public class UpdateVehicleDto {
 
+    @Positive(message = "Id must be positive number")
     private long id;
+
+    @NotBlank(message = "Vehicle must have a plate number")
     private String plate;
 
     public UpdateVehicleDto(long id, String plate) {
