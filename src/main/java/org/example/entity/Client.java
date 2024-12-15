@@ -30,10 +30,20 @@ public class Client extends BaseEntity {
     public Client() {
     }
 
+    public Client(long id, LocalDate createdAt) {
+        super(id, createdAt);
+    }
+
     public Client(long id, LocalDate createdAt, String name) {
         super(id, createdAt);
         this.name = name;
         this.debt = BigDecimal.ZERO;
+    }
+
+    public Client(long id, LocalDate createdAt, String name, BigDecimal debt) {
+        super(id, createdAt);
+        this.name = name;
+        this.debt = debt;
     }
 
     //Getters

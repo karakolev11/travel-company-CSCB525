@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ac79159-c5c8-4237-a706-0d529dc9fd37" name="Changes" comment="Test model of Vehicle and Company">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/EmployeeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/EmployeeDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/Employee/CreateEmployeeDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/Employee/CreateEmployeeDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/Employee/UpdateEmployeeDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/Employee/UpdateEmployeeDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/BaseEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/dao/CompanyDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/dao/CompanyDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/dao/VehicleDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/dao/VehicleDaoTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="5ac79159-c5c8-4237-a706-0d529dc9fd37" name="Changes" comment="Employee DAO layer" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -329,7 +319,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734303760669</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Employee DAO layer">
+      <option name="closed" value="true" />
+      <created>1734305477061</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1734305477061</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -352,6 +350,7 @@
     <MESSAGE value="fix some errors in company" />
     <MESSAGE value="fix minor bugs" />
     <MESSAGE value="Test model of Vehicle and Company" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test model of Vehicle and Company" />
+    <MESSAGE value="Employee DAO layer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Employee DAO layer" />
   </component>
 </project>
