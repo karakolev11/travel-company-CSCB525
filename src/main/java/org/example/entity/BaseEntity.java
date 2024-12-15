@@ -1,10 +1,7 @@
 package org.example.entity;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.PastOrPresent;
-import jakarta.validation.constraints.Positive;
 
 import java.time.LocalDate;
 
@@ -12,7 +9,6 @@ import java.time.LocalDate;
 public class BaseEntity {
 
     @Id
-    @Positive(message = "Id must be positive number")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 

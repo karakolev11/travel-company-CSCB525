@@ -4,12 +4,15 @@ import org.example.configuration.SessionFactoryUtil;
 import org.example.dao.ClientDao;
 //import org.example.dao.CompanyDao;
 import org.example.dao.CompanyDao;
+import org.example.dao.EmployeeDao;
 import org.example.dao.VehicleDao;
 import org.example.dto.Client.CreateClientDto;
 import org.example.dto.Client.UpdateClientDto;
+import org.example.dto.Employee.CreateEmployeeDto;
 import org.example.dto.Vehicle.CreateVehicleDto;
 import org.example.dto.Vehicle.UpdateVehicleDto;
 import org.example.entity.*;
+import org.example.enums.Category;
 import org.example.enums.VehicleType;
 import org.hibernate.HibernateException;
 
@@ -91,5 +94,13 @@ public class Main {
 //        System.out.println(vehicles);
 //        System.out.println(routes);
         //END TEST COMPANY
+
+        //TEST EMPLOYEE
+//        CreateEmployeeDto createEmployeeDto = new CreateEmployeeDto("Employee", Category.BUS_DRIVER, BigDecimal.valueOf(3000), company);
+//        EmployeeDao.createEmployee(createEmployeeDto);
+
+//        List<Employee> employee = EmployeeDao.getAllEmployees();
+//        System.out.println(employee);
+        //END TEST EMPLOYEE
     }
 }

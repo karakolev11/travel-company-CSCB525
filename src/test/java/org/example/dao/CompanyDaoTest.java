@@ -1,7 +1,5 @@
 package org.example.dao;
 
-import com.mysql.cj.Session;
-import com.mysql.cj.xdevapi.SessionFactory;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validation;
 import jakarta.validation.Validator;
@@ -15,7 +13,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.*;
-
 
 public class CompanyDaoTest {
 

@@ -19,7 +19,7 @@ public class Employee extends BaseEntity {
     @Column(name = "name", nullable = false)
     private String name;
 
-    @NotBlank(message = "Category cannot be empty.")
+    @NotNull(message = "Category cannot be empty.")
     @Enumerated(EnumType.STRING)
     @Column(name = "category", nullable = false)
     private Category category;

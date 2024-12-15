@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ac79159-c5c8-4237-a706-0d529dc9fd37" name="Changes" comment="fix minor bugs">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/dao/CompanyDaoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/dao/VehicleDaoTest.java" afterDir="false" />
+    <list default="true" id="5ac79159-c5c8-4237-a706-0d529dc9fd37" name="Changes" comment="Test model of Vehicle and Company">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/EmployeeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/EmployeeDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/Employee/CreateEmployeeDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/Employee/CreateEmployeeDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/Employee/UpdateEmployeeDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/Employee/UpdateEmployeeDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/BaseEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Company.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/dao/CompanyDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/dao/CompanyDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/dao/VehicleDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/dao/VehicleDaoTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,6 +99,11 @@
     "Gradle.CompanyDaoTest.whenInvalidCompanyName_nameIsEmptyString_thenAssertConstraintViolation.executor": "Run",
     "Gradle.CompanyDaoTest.whenInvalidCompanyName_nameMissing_thenAssertConstraintViolation.executor": "Run",
     "Gradle.CompanyDaoTest.whenProfitIsNegative_thenAssertConstraintViolation.executor": "Run",
+    "Gradle.VehicleDaoTest.executor": "Run",
+    "Gradle.VehicleDaoTest.whenInvalidVehiclePlate_plateMissing_thenAssertConstraintViolation.executor": "Run",
+    "Gradle.VehicleDaoTest.whenVehicleCreatedWithDefaultConstructor_thenAssertConstraintViolation.executor": "Run",
+    "Gradle.VehicleDaoTest.whenVehicleNotAssignedToCompany_thenAssertConstraintViolation.executor": "Run",
+    "Gradle.VehicleDaoTest.whenVehicleTypeMissing_thenAssertConstraintViolation.executor": "Run",
     "Gradle.travel-company-CSCB525 [:org.example.Main.main()].executor": "Run",
     "JUnit.org.example in travel-company-CSCB525.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -108,7 +117,7 @@
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.CompanyDaoTest">
+  <component name="RunManager">
     <configuration name="CompanyDaoTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -133,7 +142,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="CompanyDaoTest.whenDescriptionMissing_thenAssertConstraintViolation" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="VehicleDaoTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -146,7 +155,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.example.dao.CompanyDaoTest.whenDescriptionMissing_thenAssertConstraintViolation&quot;" />
+            <option value="&quot;org.example.dao.VehicleDaoTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -157,7 +166,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="CompanyDaoTest.whenInvalidCompanyName_nameIsEmptyString_thenAssertConstraintViolation" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="VehicleDaoTest.whenVehicleCreatedWithDefaultConstructor_thenAssertConstraintViolation" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -170,7 +179,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.example.dao.CompanyDaoTest.whenInvalidCompanyName_nameIsEmptyString_thenAssertConstraintViolation&quot;" />
+            <option value="&quot;org.example.dao.VehicleDaoTest.whenVehicleCreatedWithDefaultConstructor_thenAssertConstraintViolation&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -181,7 +190,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="CompanyDaoTest.whenInvalidCompanyName_nameMissing_thenAssertConstraintViolation" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="VehicleDaoTest.whenVehicleNotAssignedToCompany_thenAssertConstraintViolation" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -194,7 +203,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.example.dao.CompanyDaoTest.whenInvalidCompanyName_nameMissing_thenAssertConstraintViolation&quot;" />
+            <option value="&quot;org.example.dao.VehicleDaoTest.whenVehicleNotAssignedToCompany_thenAssertConstraintViolation&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -205,7 +214,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="CompanyDaoTest.whenProfitIsNegative_thenAssertConstraintViolation" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="VehicleDaoTest.whenVehicleTypeMissing_thenAssertConstraintViolation" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -218,7 +227,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.example.dao.CompanyDaoTest.whenProfitIsNegative_thenAssertConstraintViolation&quot;" />
+            <option value="&quot;org.example.dao.VehicleDaoTest.whenVehicleTypeMissing_thenAssertConstraintViolation&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -232,10 +241,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.CompanyDaoTest" />
-        <item itemvalue="Gradle.CompanyDaoTest.whenInvalidCompanyName_nameIsEmptyString_thenAssertConstraintViolation" />
-        <item itemvalue="Gradle.CompanyDaoTest.whenInvalidCompanyName_nameMissing_thenAssertConstraintViolation" />
-        <item itemvalue="Gradle.CompanyDaoTest.whenProfitIsNegative_thenAssertConstraintViolation" />
-        <item itemvalue="Gradle.CompanyDaoTest.whenDescriptionMissing_thenAssertConstraintViolation" />
+        <item itemvalue="Gradle.VehicleDaoTest" />
+        <item itemvalue="Gradle.VehicleDaoTest.whenVehicleCreatedWithDefaultConstructor_thenAssertConstraintViolation" />
+        <item itemvalue="Gradle.VehicleDaoTest.whenVehicleNotAssignedToCompany_thenAssertConstraintViolation" />
+        <item itemvalue="Gradle.VehicleDaoTest.whenVehicleTypeMissing_thenAssertConstraintViolation" />
       </list>
     </recent_temporary>
   </component>
@@ -312,7 +321,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734295703256</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Test model of Vehicle and Company">
+      <option name="closed" value="true" />
+      <created>1734303760669</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1734303760669</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -334,6 +351,7 @@
     <MESSAGE value="Sort and filter Companies + Some Route dto set up" />
     <MESSAGE value="fix some errors in company" />
     <MESSAGE value="fix minor bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix minor bugs" />
+    <MESSAGE value="Test model of Vehicle and Company" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test model of Vehicle and Company" />
   </component>
 </project>

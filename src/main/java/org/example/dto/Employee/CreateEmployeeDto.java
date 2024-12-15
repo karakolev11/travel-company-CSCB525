@@ -1,6 +1,7 @@
 package org.example.dto.Employee;
 import jakarta.persistence.Column;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Positive;
 import org.example.entity.Company;
@@ -14,7 +15,7 @@ public class CreateEmployeeDto {
     @Pattern(regexp = "^[A-Z].*", message = "Employee name must start with a capital letter.")
     private String name;
 
-    @NotBlank(message = "Employee must have a category.")
+    @NotNull(message = "Employee must have a category.")
     private Category category;
 
     @Positive(message = "Salary can't be zero or negative.")

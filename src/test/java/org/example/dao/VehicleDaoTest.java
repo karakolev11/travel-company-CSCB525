@@ -66,8 +66,7 @@ public class VehicleDaoTest {
 
         List<String> messages = validate(vehicle);
         System.out.println(messages);
-        assertEquals(4,messages.size());
-        assertTrue(messages.contains("Id must be positive number"));
+        assertEquals(3,messages.size());
         assertTrue(messages.contains("Vehicle must have a plate number"));
         assertTrue(messages.contains("Vehicle must have a type"));
         assertTrue(messages.contains("Vehicle must be assigned to company"));
