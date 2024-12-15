@@ -1,9 +1,12 @@
 package org.example;
 
 import org.example.configuration.SessionFactoryUtil;
+import org.example.dao.ClientDao;
 import org.example.dao.VehicleDao;
+import org.example.dto.Client.CreateClientDto;
 import org.example.dto.Vehicle.CreateVehicleDto;
 import org.example.dto.Vehicle.UpdateVehicleDto;
+import org.example.entity.Client;
 import org.example.entity.Company;
 import org.example.entity.Route;
 import org.example.entity.Vehicle;
@@ -23,7 +26,7 @@ public class Main {
             System.out.printf(e.getMessage());
         }
 
-        // TESTING CREATE VEHICLE
+        // TESTING VEHICLE
         Company company = new Company(1, LocalDate.now(), "TestCompany", "test description");
         CreateVehicleDto createVehicleDto = new CreateVehicleDto("BT2663KM", VehicleType.SPECIAL_TRUCK, company);
 
@@ -40,5 +43,13 @@ public class Main {
 //        VehicleDao.softDeleteVehicle(2);
 //        VehicleDao.hardDeleteCompany(vehicle);
         //END TESTING VEHICLE
+
+        //TESTING CLIENT
+//        CreateClientDto createClientDto = new CreateClientDto("Simona");
+//        ClientDao.createClient(createClientDto);
+
+//        Client client = ClientDao.getClientById(1);
+//        System.out.println(client);
+        //END TESTING CLIENT
     }
 }
