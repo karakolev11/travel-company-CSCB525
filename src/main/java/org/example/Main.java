@@ -4,6 +4,7 @@ import org.example.configuration.SessionFactoryUtil;
 import org.example.dao.ClientDao;
 import org.example.dao.VehicleDao;
 import org.example.dto.Client.CreateClientDto;
+import org.example.dto.Client.UpdateClientDto;
 import org.example.dto.Vehicle.CreateVehicleDto;
 import org.example.dto.Vehicle.UpdateVehicleDto;
 import org.example.entity.Client;
@@ -13,6 +14,7 @@ import org.example.entity.Vehicle;
 import org.example.enums.VehicleType;
 import org.hibernate.HibernateException;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -50,6 +52,33 @@ public class Main {
 
 //        Client client = ClientDao.getClientById(1);
 //        System.out.println(client);
+
+//        List<Client> clients = ClientDao.getAllClients();
+//        System.out.println(clients);
+
+//        List<Route> routes = ClientDao.getAllRoutesByClient(1);
+//        System.out.println(routes);
+
+//        BigDecimal debt = ClientDao.getClientDebt(1);
+//        System.out.println(debt);
+
+//        UpdateClientDto updateClientDto = new UpdateClientDto(1, "Evgeni Ignatov", BigDecimal.TWO);
+//        ClientDao.updateClient(updateClientDto);
+
+//        UpdateClientDto updateClientDto = new UpdateClientDto(1, BigDecimal.TWO);
+//        ClientDao.clientPaysDebt(updateClientDto);
+
+//        UpdateClientDto updateClientDto = new UpdateClientDto(1,"Evgeni", BigDecimal.TEN);
+//        ClientDao.updateClient(updateClientDto);
+//
+//        String message = ClientDao.checkClientDebt(1);
+//        System.out.println(message);
+
+//        ClientDao.softDeleteClient(2);
+
+//        Client client = ClientDao.getClientById(3);
+//        System.out.println(client);
+//        ClientDao.hardDeleteClient(client);
         //END TESTING CLIENT
     }
 }
