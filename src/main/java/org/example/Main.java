@@ -2,15 +2,14 @@ package org.example;
 
 import org.example.configuration.SessionFactoryUtil;
 import org.example.dao.ClientDao;
+//import org.example.dao.CompanyDao;
+import org.example.dao.CompanyDao;
 import org.example.dao.VehicleDao;
 import org.example.dto.Client.CreateClientDto;
 import org.example.dto.Client.UpdateClientDto;
 import org.example.dto.Vehicle.CreateVehicleDto;
 import org.example.dto.Vehicle.UpdateVehicleDto;
-import org.example.entity.Client;
-import org.example.entity.Company;
-import org.example.entity.Route;
-import org.example.entity.Vehicle;
+import org.example.entity.*;
 import org.example.enums.VehicleType;
 import org.hibernate.HibernateException;
 
@@ -80,5 +79,17 @@ public class Main {
 //        System.out.println(client);
 //        ClientDao.hardDeleteClient(client);
         //END TESTING CLIENT
+
+        //TEST COMPANY
+//        List<Company> company1 = CompanyDao.getAllCompanies();
+//        System.out.println(company1);
+
+//        List<Employee> employees = CompanyDao.getAllEmployeesInCompany(1);
+//        List<Vehicle> vehicles = CompanyDao.getAllVehiclesInCompany(1);
+//        List<Route> routes = CompanyDao.getAllRoutesInCompany(1);
+//        System.out.println(employees);
+//        System.out.println(vehicles);
+//        System.out.println(routes);
+        //END TEST COMPANY
     }
 }

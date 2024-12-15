@@ -1,6 +1,7 @@
 package org.example.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 import org.example.enums.VehicleType;
 
 import java.time.LocalDate;
@@ -9,6 +10,7 @@ import java.util.Set;
 @Entity(name = "vehicle")
 public class Vehicle extends BaseEntity {
 
+    @NotBlank(message = "Vehicle must have a plate number")
     @Column(name = "plate", nullable = false)
     private String plate;
 
@@ -24,6 +26,12 @@ public class Vehicle extends BaseEntity {
 
     //Constructors
     public Vehicle() {
+    }
+
+    public Vehicle(String plate, VehicleType vehicleType, Company company) {
+        this.plate = plate;
+        this.vehicleType = vehicleType;
+        this.company = company;
     }
 
     public Vehicle(long id, LocalDate createdAt, String plate, VehicleType vehicleType, Company company) {
