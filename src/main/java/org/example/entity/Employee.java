@@ -24,6 +24,7 @@ public class Employee extends BaseEntity {
     @Column(name = "category", nullable = false)
     private Category category;
 
+    @NotNull(message = "Employee must have salary")
     @Positive(message = "Salary can't be zero or negative.")
     @Column(name = "salary", nullable = false)
     private BigDecimal salary;
@@ -36,6 +37,27 @@ public class Employee extends BaseEntity {
 
     //Constructors
     public Employee() {
+    }
+
+    public Employee(long id, LocalDate createdAt, Category category, BigDecimal salary, Company company) {
+        super(id, createdAt);
+        this.category = category;
+        this.salary = salary;
+        this.company = company;
+    }
+
+    public Employee(long id, LocalDate createdAt, String name, BigDecimal salary, Company company) {
+        super(id, createdAt);
+        this.name = name;
+        this.salary = salary;
+        this.company = company;
+    }
+
+    public Employee(long id, LocalDate createdAt, String name, Category category, Company company) {
+        super(id, createdAt);
+        this.name = name;
+        this.category = category;
+        this.company = company;
     }
 
     public Employee(long id, LocalDate createdAt, String name, Category category, BigDecimal salary, Company company) {
