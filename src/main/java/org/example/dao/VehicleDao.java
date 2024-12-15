@@ -28,11 +28,17 @@ public class VehicleDao {
         }
     }
 
-    public static Vehicle getVehicleById(long id) {
+    public static Vehicle getVehicleById(long vehicleId) {
         Vehicle vehicle;
         try(Session session = SessionFactoryUtil.getSessionFactory().openSession()) {
             Transaction transaction = session.beginTransaction();
-            vehicle = session.get(Vehicle.class, id);
+            vehicle = session.createQuery(
+                    "SELECT v FROM vehicle v " +
+                            "join fetch v.company " +
+                            "WHERE v.id = :vehicleId " +
+                            "AND v.deletedAt IS NULL", Vehicle.class)
+                    .setParameter("vehicleId", vehicleId)
+                    .getSingleResult();
             transaction.commit();
         }
 
@@ -45,7 +51,8 @@ public class VehicleDao {
             Transaction transaction = session.beginTransaction();
             vehicles = session
                     .createQuery(
-                            "SELECT v FROM Vehicle v " +
+                            "SELECT v FROM vehicle v " +
+                                    "join fetch v.company " +
                                     "WHERE v.deletedAt IS NULL", Vehicle.class)
                     .getResultList();
             transaction.commit();
@@ -60,7 +67,8 @@ public class VehicleDao {
             Transaction transaction = session.beginTransaction();
             vehicles = session
                     .createQuery(
-                            "SELECT v FROM Vehicle v " +
+                            "SELECT v FROM vehicle v " +
+                                    "join fetch v.company " +
                                     "WHERE v.company.id = :companyId " +
                                     "AND v.deletedAt IS NULL",
                             Vehicle.class)
@@ -78,7 +86,11 @@ public class VehicleDao {
             Transaction transaction = session.beginTransaction();
             routes = session
                     .createQuery(
-                            "SELECT r FROM Route r " +
+                            "SELECT r FROM route r " +
+                                    "join fetch r.vehicle " +
+                                    "join fetch r.company " +
+                                    "join fetch r.employee " +
+                                    "join fetch r.client " +
                                     "WHERE r.vehicle.id = :vehicleId " +
                                     "AND r.deletedAt IS NULL",
                             Route.class)
@@ -94,7 +106,7 @@ public class VehicleDao {
         try (Session session = SessionFactoryUtil.getSessionFactory().openSession()) {
             Transaction transaction = session.beginTransaction();
             session.createQuery(
-                            "UPDATE Vehicle v SET v.plate = :plate " +
+                            "UPDATE vehicle v SET v.plate = :plate " +
                                     "WHERE v.id = :id " +
                                     "AND v.deletedAt IS NULL")
                     .setParameter("plate", updateVehicleDto.getPlate())
@@ -109,7 +121,7 @@ public class VehicleDao {
         try (Session session = SessionFactoryUtil.getSessionFactory().openSession()) {
             Transaction transaction = session.beginTransaction();
             session.createQuery(
-                            "UPDATE Vehicle v SET v.deletedAt = :deleteDate " +
+                            "UPDATE vehicle v SET v.deletedAt = :deleteDate " +
                                     "WHERE v.id = :id")
                     .setParameter("deleteDate", deleteDate)
                     .setParameter("id", vehicleId)

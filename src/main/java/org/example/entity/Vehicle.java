@@ -59,7 +59,6 @@ public class Vehicle extends BaseEntity {
         return "Vehicle{" +
                 "vehicleType=" + vehicleType +
                 "plate=" + plate +
-                ", company=" + company +
                 '}';
     }
 }
