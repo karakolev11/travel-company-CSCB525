@@ -23,7 +23,7 @@ public class Company extends BaseEntity {
     @Column(name = "description", nullable = false)
     private String description;
 
-    @PositiveOrZero(message = "Profit must not be negative number")
+    @PositiveOrZero(message = "Profit must not be negative number.")
     @Column(name = "profit", nullable = true)
     private BigDecimal profit;
 
@@ -49,6 +49,31 @@ public class Company extends BaseEntity {
         super(id, createdAt);
         this.name = name;
         this.description = description;
+    }
+
+    public Company(long id, LocalDate createdAt, String name, BigDecimal profit) {
+        super(id, createdAt);
+        this.name = name;
+        this.profit = profit;
+    }
+
+    public Company(String name, String description, BigDecimal profit) {
+        this.name = name;
+        this.description = description;
+        this.profit = profit;
+    }
+
+    public Company(long id, LocalDate createdAt, BigDecimal profit, String description) {
+        super(id, createdAt);
+        this.description = description;
+        this.profit = profit;
+    }
+
+    public Company(long id, LocalDate createdAt, String name, String description, BigDecimal profit) {
+        super(id, createdAt);
+        this.name = name;
+        this.description = description;
+        this.profit = profit;
     }
 
     //Getters

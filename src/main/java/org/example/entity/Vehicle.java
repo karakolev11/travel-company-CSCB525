@@ -2,6 +2,7 @@ package org.example.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import org.example.enums.VehicleType;
 
 import java.time.LocalDate;
@@ -14,12 +15,12 @@ public class Vehicle extends BaseEntity {
     @Column(name = "plate", nullable = false)
     private String plate;
 
-    @NotBlank(message = "Vehicle must have a type")
+    @NotNull(message = "Vehicle must have a type")
     @Enumerated(EnumType.STRING)
     @Column(name = "vehicle_type", nullable = false)
     private VehicleType vehicleType;
 
-    @NotBlank(message = "Vehicle must be assigned to company")
+    @NotNull(message = "Vehicle must be assigned to company")
     @ManyToOne(fetch = FetchType.LAZY)
     private Company company;
 
@@ -33,6 +34,24 @@ public class Vehicle extends BaseEntity {
     public Vehicle(String plate, VehicleType vehicleType, Company company) {
         this.plate = plate;
         this.vehicleType = vehicleType;
+        this.company = company;
+    }
+
+    public Vehicle(long id, LocalDate createdAt, String plate, VehicleType vehicleType) {
+        super(id, createdAt);
+        this.plate = plate;
+        this.vehicleType = vehicleType;
+    }
+
+    public Vehicle(long id, LocalDate createdAt, VehicleType vehicleType, Company company) {
+        super(id, createdAt);
+        this.vehicleType = vehicleType;
+        this.company = company;
+    }
+
+    public Vehicle(long id, LocalDate createdAt, String plate, Company company) {
+        super(id, createdAt);
+        this.plate = plate;
         this.company = company;
     }
 
