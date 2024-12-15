@@ -14,10 +14,12 @@ public class Vehicle extends BaseEntity {
     @Column(name = "plate", nullable = false)
     private String plate;
 
+    @NotBlank(message = "Vehicle must have a type")
     @Enumerated(EnumType.STRING)
     @Column(name = "vehicle_type", nullable = false)
     private VehicleType vehicleType;
 
+    @NotBlank(message = "Vehicle must be assigned to company")
     @ManyToOne(fetch = FetchType.LAZY)
     private Company company;
 
