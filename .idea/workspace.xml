@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ac79159-c5c8-4237-a706-0d529dc9fd37" name="Changes" comment="Employee DAO layer" />
+    <list default="true" id="5ac79159-c5c8-4237-a706-0d529dc9fd37" name="Changes" comment="Employee Test entity constraints">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/EmployeeSortAndFilterDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/RouteDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/RouteDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/Route/CreateRouteDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/Route/CreateRouteDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/Route/UpdateRouteDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/Route/UpdateRouteDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Route.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Route.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,6 +88,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Gradle.Build travel-company-CSCB525.executor": "Run",
+    "Gradle.ClientDaoTest.executor": "Run",
+    "Gradle.ClientDaoTest.whenDebtIsNegative_thenAssertConstraintViolation.executor": "Run",
+    "Gradle.ClientDaoTest.whenInvalidClientName_firstLetterNotCapital_thenAssertConstraintViolation.executor": "Run",
+    "Gradle.ClientDaoTest.whenInvalidClientName_nameMissing_thenAssertConstraintViolation.executor": "Run",
     "Gradle.CompanyDaoTest.executor": "Run",
     "Gradle.CompanyDaoTest.invalidCompanyName_assertConstraintViolation.executor": "Run",
     "Gradle.CompanyDaoTest.invalidCompanyName_firstLetterNotCapital_thenAssertConstraintViolation.executor": "Run",
@@ -89,6 +100,9 @@
     "Gradle.CompanyDaoTest.whenInvalidCompanyName_nameIsEmptyString_thenAssertConstraintViolation.executor": "Run",
     "Gradle.CompanyDaoTest.whenInvalidCompanyName_nameMissing_thenAssertConstraintViolation.executor": "Run",
     "Gradle.CompanyDaoTest.whenProfitIsNegative_thenAssertConstraintViolation.executor": "Run",
+    "Gradle.EmployeeDaoTest.executor": "Run",
+    "Gradle.EmployeeDaoTest.whenCategoryIsMissing_thenAssertConstraintViolation.executor": "Run",
+    "Gradle.EmployeeDaoTest.whenSalaryIsMissing_thenAssertConstraintViolation.executor": "Run",
     "Gradle.VehicleDaoTest.executor": "Run",
     "Gradle.VehicleDaoTest.whenInvalidVehiclePlate_plateMissing_thenAssertConstraintViolation.executor": "Run",
     "Gradle.VehicleDaoTest.whenVehicleCreatedWithDefaultConstructor_thenAssertConstraintViolation.executor": "Run",
@@ -108,7 +122,7 @@
   }
 }]]></component>
   <component name="RunManager">
-    <configuration name="CompanyDaoTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ClientDaoTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -121,7 +135,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.example.dao.CompanyDaoTest&quot;" />
+            <option value="&quot;org.example.dao.ClientDaoTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -132,7 +146,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="VehicleDaoTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ClientDaoTest.whenDebtIsNegative_thenAssertConstraintViolation" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -145,7 +159,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.example.dao.VehicleDaoTest&quot;" />
+            <option value="&quot;org.example.dao.ClientDaoTest.whenDebtIsNegative_thenAssertConstraintViolation&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -156,7 +170,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="VehicleDaoTest.whenVehicleCreatedWithDefaultConstructor_thenAssertConstraintViolation" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="EmployeeDaoTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -169,7 +183,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.example.dao.VehicleDaoTest.whenVehicleCreatedWithDefaultConstructor_thenAssertConstraintViolation&quot;" />
+            <option value="&quot;org.example.dao.EmployeeDaoTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -180,7 +194,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="VehicleDaoTest.whenVehicleNotAssignedToCompany_thenAssertConstraintViolation" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="EmployeeDaoTest.whenCategoryIsMissing_thenAssertConstraintViolation" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -193,7 +207,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.example.dao.VehicleDaoTest.whenVehicleNotAssignedToCompany_thenAssertConstraintViolation&quot;" />
+            <option value="&quot;org.example.dao.EmployeeDaoTest.whenCategoryIsMissing_thenAssertConstraintViolation&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -204,7 +218,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="VehicleDaoTest.whenVehicleTypeMissing_thenAssertConstraintViolation" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="EmployeeDaoTest.whenSalaryIsMissing_thenAssertConstraintViolation" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -217,7 +231,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.example.dao.VehicleDaoTest.whenVehicleTypeMissing_thenAssertConstraintViolation&quot;" />
+            <option value="&quot;org.example.dao.EmployeeDaoTest.whenSalaryIsMissing_thenAssertConstraintViolation&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -230,11 +244,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.CompanyDaoTest" />
-        <item itemvalue="Gradle.VehicleDaoTest" />
-        <item itemvalue="Gradle.VehicleDaoTest.whenVehicleCreatedWithDefaultConstructor_thenAssertConstraintViolation" />
-        <item itemvalue="Gradle.VehicleDaoTest.whenVehicleNotAssignedToCompany_thenAssertConstraintViolation" />
-        <item itemvalue="Gradle.VehicleDaoTest.whenVehicleTypeMissing_thenAssertConstraintViolation" />
+        <item itemvalue="Gradle.EmployeeDaoTest" />
+        <item itemvalue="Gradle.EmployeeDaoTest.whenSalaryIsMissing_thenAssertConstraintViolation" />
+        <item itemvalue="Gradle.EmployeeDaoTest.whenCategoryIsMissing_thenAssertConstraintViolation" />
+        <item itemvalue="Gradle.ClientDaoTest.whenDebtIsNegative_thenAssertConstraintViolation" />
+        <item itemvalue="Gradle.ClientDaoTest" />
       </list>
     </recent_temporary>
   </component>
@@ -327,7 +341,23 @@
       <option name="project" value="LOCAL" />
       <updated>1734305477061</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Client Test entity constraints">
+      <option name="closed" value="true" />
+      <created>1734306030641</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1734306030641</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Employee Test entity constraints">
+      <option name="closed" value="true" />
+      <created>1734307077652</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1734307077652</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -351,6 +381,8 @@
     <MESSAGE value="fix minor bugs" />
     <MESSAGE value="Test model of Vehicle and Company" />
     <MESSAGE value="Employee DAO layer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Employee DAO layer" />
+    <MESSAGE value="Client Test entity constraints" />
+    <MESSAGE value="Employee Test entity constraints" />
+    <option name="LAST_COMMIT_MESSAGE" value="Employee Test entity constraints" />
   </component>
 </project>

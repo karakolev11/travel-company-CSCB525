@@ -3,6 +3,7 @@ package org.example.entity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.FutureOrPresent;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PositiveOrZero;
 import org.example.enums.CargoType;
 
@@ -20,21 +21,21 @@ public class Route extends BaseEntity {
     @Column(name = "destination", nullable = false)
     private String destination;
 
-    @NotBlank(message = "Start date cannot be empty.")
+    @NotNull(message = "Start date cannot be empty.")
     @Column(name = "start_date", nullable = false)
     private LocalDate startDate;
 
-    @NotBlank(message = "Date cannot be empty.")
+    @NotNull(message = "Date cannot be empty.")
     @FutureOrPresent(message = "Delivery date can't be in the past.")
     @Column(name = "delivery_date", nullable = false)
     private LocalDate deliveryDate;
 
-    @NotBlank(message = "Cargo type cannot be empty.")
+    @NotNull(message = "Cargo type cannot be empty.")
     @Enumerated(EnumType.STRING)
     @Column(name = "cargo_type", nullable = false)
     private CargoType cargoType;
 
-    @NotBlank(message = "Is Paid should be set.")
+    @NotNull(message = "Is Paid should be set.")
     @Column(name = "is_paid", nullable = false)
     private boolean isPaid;
 
@@ -46,15 +47,19 @@ public class Route extends BaseEntity {
     @Column(name = "weight", nullable = true)
     private BigDecimal weight;
 
+    @NotNull(message = "Route must be have at least one vehicle")
     @ManyToOne(fetch = FetchType.LAZY)
     private Vehicle vehicle;
 
+    @NotNull(message = "Route must be have company")
     @ManyToOne(fetch = FetchType.LAZY)
     private Company company;
 
+    @NotNull(message = "Route must be have at least one employee")
     @ManyToOne(fetch = FetchType.LAZY)
     private Employee employee;
 
+    @NotNull(message = "Route must be have at least one client")
     @ManyToOne(fetch = FetchType.LAZY)
     private Client client;
 
