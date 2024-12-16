@@ -135,4 +135,24 @@ public class RouteDao {
             transaction.commit();
         }
     }
+
+    public static List<Route> getRoutesByDestination(String destination) {
+        List<Route> routes;
+        try (Session session = SessionFactoryUtil.getSessionFactory().openSession()) {
+            Transaction transaction = session.beginTransaction();
+            routes = session.createQuery(
+                            "SELECT r FROM route r " +
+                                    "join fetch r.company " +
+                                    "join fetch r.employee " +
+                                    "join fetch r.vehicle " +
+                                    "join fetch r.client " +
+                                    "WHERE r.destination LIKE %:destination% " +
+                                    "AND r.deletedAt IS NULL", Route.class)
+                    .setParameter("destination", destination)
+                    .getResultList();
+            transaction.commit();
+        }
+
+        return routes;
+    }
 }

@@ -78,7 +78,7 @@ public class EmployeeSortAndFilterDao {
                                     "join fetch e.vehicles " +
                                     "join fetch e.routes " +
                                     "WHERE e.deletedAt IS NULL " +
-                                    "ORDER BY e.category " , Employee.class)
+                                    "ORDER BY e.category ASC" , Employee.class)
                     .getResultList();
             transaction.commit();
         }
@@ -95,7 +95,7 @@ public class EmployeeSortAndFilterDao {
                                     "join fetch e.company " +
                                     "join fetch e.vehicles " +
                                     "join fetch e.routes " +
-                                    "WHERE e.category = :salary " +
+                                    "WHERE e.category = :category " +
                                     "AND e.deletedAt IS NULL ", Employee.class)
                     .setParameter("category", category)
                     .getResultList();
