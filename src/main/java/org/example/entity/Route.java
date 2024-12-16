@@ -37,29 +37,31 @@ public class Route extends BaseEntity {
 
     @NotNull(message = "Is Paid should be set.")
     @Column(name = "is_paid", nullable = false)
-    private boolean isPaid;
+    private Boolean isPaid;
 
+    @NotNull(message = "Cost must be set.")
     @PositiveOrZero(message = "Cost can't be negative number")
     @Column(name = "cost", nullable = false)
     private BigDecimal cost;
 
+    @NotNull(message = "Weight must be set.")
     @PositiveOrZero(message = "Weight can't be negative number")
     @Column(name = "weight", nullable = true)
     private BigDecimal weight;
 
-    @NotNull(message = "Route must be have at least one vehicle")
+    @NotNull(message = "Route must have at least one vehicle")
     @ManyToOne(fetch = FetchType.LAZY)
     private Vehicle vehicle;
 
-    @NotNull(message = "Route must be have company")
+    @NotNull(message = "Route must have company")
     @ManyToOne(fetch = FetchType.LAZY)
     private Company company;
 
-    @NotNull(message = "Route must be have at least one employee")
+    @NotNull(message = "Route must have at least one employee")
     @ManyToOne(fetch = FetchType.LAZY)
     private Employee employee;
 
-    @NotNull(message = "Route must be have at least one client")
+    @NotNull(message = "Route must have at least one client")
     @ManyToOne(fetch = FetchType.LAZY)
     private Client client;
 
@@ -120,6 +122,342 @@ public class Route extends BaseEntity {
         this.company = company;
         this.employee = employee;
         this.client = client;
+    }
+
+    public Route(
+            long id,
+            LocalDate createdAt,
+            String startingPoint,
+            String destination,
+            LocalDate startDate,
+            LocalDate deliveryDate,
+            CargoType cargoType,
+            boolean isPaid,
+            BigDecimal cost,
+            BigDecimal weight,
+            Company company,
+            Employee employee,
+            Client client) {
+        super(id, createdAt);
+        this.startingPoint = startingPoint;
+        this.destination = destination;
+        this.startDate = startDate;
+        this.deliveryDate = deliveryDate;
+        this.cargoType = cargoType;
+        this.isPaid = isPaid;
+        this.cost = cost;
+        this.weight = weight;
+        this.company = company;
+        this.employee = employee;
+        this.client = client;
+    }
+
+    public Route(
+            long id,
+            LocalDate createdAt,
+            String destination,
+            LocalDate startDate,
+            LocalDate deliveryDate,
+            CargoType cargoType,
+            boolean isPaid,
+            BigDecimal cost,
+            BigDecimal weight,
+            Vehicle vehicle,
+            Company company,
+            Employee employee,
+            Client client) {
+        super(id, createdAt);
+        this.destination = destination;
+        this.startDate = startDate;
+        this.deliveryDate = deliveryDate;
+        this.cargoType = cargoType;
+        this.isPaid = isPaid;
+        this.cost = cost;
+        this.weight = weight;
+        this.vehicle = vehicle;
+        this.company = company;
+        this.employee = employee;
+        this.client = client;
+    }
+
+    public Route(
+            long id,
+            LocalDate createdAt,
+            LocalDate startDate,
+            LocalDate deliveryDate,
+            CargoType cargoType,
+            String startingPoint,
+            boolean isPaid,
+            BigDecimal cost,
+            BigDecimal weight,
+            Vehicle vehicle,
+            Company company,
+            Employee employee,
+            Client client) {
+        super(id, createdAt);
+        this.startDate = startDate;
+        this.deliveryDate = deliveryDate;
+        this.cargoType = cargoType;
+        this.startingPoint = startingPoint;
+        this.isPaid = isPaid;
+        this.cost = cost;
+        this.weight = weight;
+        this.vehicle = vehicle;
+        this.company = company;
+        this.employee = employee;
+        this.client = client;
+    }
+
+    public Route(
+            long id,
+            LocalDate createdAt,
+            String startingPoint,
+            String destination,
+            LocalDate deliveryDate,
+            CargoType cargoType,
+            boolean isPaid,
+            BigDecimal cost,
+            BigDecimal weight,
+            Vehicle vehicle,
+            Company company,
+            Employee employee,
+            Client client) {
+        super(id, createdAt);
+        this.startingPoint = startingPoint;
+        this.destination = destination;
+        this.deliveryDate = deliveryDate;
+        this.cargoType = cargoType;
+        this.isPaid = isPaid;
+        this.cost = cost;
+        this.weight = weight;
+        this.vehicle = vehicle;
+        this.company = company;
+        this.employee = employee;
+        this.client = client;
+    }
+
+    public Route(
+            long id,
+            LocalDate createdAt,
+            String startingPoint,
+            String destination,
+            CargoType cargoType,
+            LocalDate startDate,
+            boolean isPaid,
+            BigDecimal cost,
+            BigDecimal weight,
+            Vehicle vehicle,
+            Company company,
+            Employee employee,
+            Client client) {
+        super(id, createdAt);
+        this.startingPoint = startingPoint;
+        this.destination = destination;
+        this.cargoType = cargoType;
+        this.startDate = startDate;
+        this.isPaid = isPaid;
+        this.cost = cost;
+        this.weight = weight;
+        this.vehicle = vehicle;
+        this.company = company;
+        this.employee = employee;
+        this.client = client;
+    }
+
+    public Route(
+            long id,
+            LocalDate createdAt,
+            String startingPoint,
+            String destination,
+            LocalDate startDate,
+            LocalDate deliveryDate,
+            boolean isPaid,
+            BigDecimal cost,
+            BigDecimal weight,
+            Vehicle vehicle,
+            Company company,
+            Employee employee,
+            Client client) {
+        super(id, createdAt);
+        this.startingPoint = startingPoint;
+        this.destination = destination;
+        this.startDate = startDate;
+        this.deliveryDate = deliveryDate;
+        this.isPaid = isPaid;
+        this.cost = cost;
+        this.weight = weight;
+        this.vehicle = vehicle;
+        this.company = company;
+        this.employee = employee;
+        this.client = client;
+    }
+
+    public Route(
+            long id,
+            LocalDate createdAt,
+            CargoType cargoType,
+            String startingPoint,
+            String destination,
+            LocalDate startDate,
+            LocalDate deliveryDate,
+            BigDecimal cost,
+            BigDecimal weight,
+            Vehicle vehicle,
+            Company company,
+            Client client,
+            Employee employee) {
+        super(id, createdAt);
+        this.cargoType = cargoType;
+        this.startingPoint = startingPoint;
+        this.destination = destination;
+        this.startDate = startDate;
+        this.deliveryDate = deliveryDate;
+        this.cost = cost;
+        this.weight = weight;
+        this.vehicle = vehicle;
+        this.company = company;
+        this.client = client;
+        this.employee = employee;
+    }
+
+    public Route(
+            long id,
+            LocalDate createdAt,
+            String startingPoint,
+            String destination,
+            LocalDate startDate,
+            LocalDate deliveryDate,
+            CargoType cargoType,
+            boolean isPaid,
+            BigDecimal weight,
+            Vehicle vehicle,
+            Company company,
+            Employee employee,
+            Client client) {
+        super(id, createdAt);
+        this.startingPoint = startingPoint;
+        this.destination = destination;
+        this.startDate = startDate;
+        this.deliveryDate = deliveryDate;
+        this.cargoType = cargoType;
+        this.isPaid = isPaid;
+        this.weight = weight;
+        this.vehicle = vehicle;
+        this.company = company;
+        this.employee = employee;
+        this.client = client;
+    }
+
+    public Route(
+            long id,
+            LocalDate createdAt,
+            String startingPoint,
+            String destination,
+            LocalDate startDate,
+            LocalDate deliveryDate,
+            CargoType cargoType,
+            boolean isPaid,
+            BigDecimal cost,
+            BigDecimal weight,
+            Vehicle vehicle,
+            Employee employee,
+            Client client) {
+        super(id, createdAt);
+        this.startingPoint = startingPoint;
+        this.destination = destination;
+        this.startDate = startDate;
+        this.deliveryDate = deliveryDate;
+        this.cargoType = cargoType;
+        this.isPaid = isPaid;
+        this.cost = cost;
+        this.weight = weight;
+        this.vehicle = vehicle;
+        this.employee = employee;
+        this.client = client;
+    }
+
+    public Route(
+            long id,
+            LocalDate createdAt,
+            String startingPoint,
+            String destination,
+            LocalDate startDate,
+            LocalDate deliveryDate,
+            CargoType cargoType,
+            boolean isPaid,
+            BigDecimal cost,
+            BigDecimal weight,
+            Vehicle vehicle,
+            Company company,
+            Client client) {
+        super(id, createdAt);
+        this.startingPoint = startingPoint;
+        this.destination = destination;
+        this.startDate = startDate;
+        this.deliveryDate = deliveryDate;
+        this.cargoType = cargoType;
+        this.isPaid = isPaid;
+        this.cost = cost;
+        this.weight = weight;
+        this.vehicle = vehicle;
+        this.company = company;
+        this.client = client;
+    }
+
+    public Route(
+            long id,
+            LocalDate createdAt,
+            String startingPoint,
+            String destination,
+            LocalDate startDate,
+            LocalDate deliveryDate,
+            CargoType cargoType,
+            boolean isPaid,
+            Vehicle vehicle,
+            Company company,
+            Employee employee,
+            Client client,
+            BigDecimal cost) {
+        super(id, createdAt);
+        this.startingPoint = startingPoint;
+        this.destination = destination;
+        this.startDate = startDate;
+        this.deliveryDate = deliveryDate;
+        this.cargoType = cargoType;
+        this.isPaid = isPaid;
+        this.vehicle = vehicle;
+        this.company = company;
+        this.employee = employee;
+        this.client = client;
+        this.cost = cost;
+    }
+
+    public Route(
+            long id,
+            LocalDate createdAt,
+            String startingPoint,
+            String destination,
+            LocalDate startDate,
+            LocalDate deliveryDate,
+            CargoType cargoType,
+            boolean isPaid,
+            BigDecimal cost,
+            BigDecimal weight,
+            Vehicle vehicle,
+            Company company,
+            Employee employee) {
+        super(id, createdAt);
+        this.startingPoint = startingPoint;
+        this.destination = destination;
+        this.startDate = startDate;
+        this.deliveryDate = deliveryDate;
+        this.cargoType = cargoType;
+        this.isPaid = isPaid;
+        this.cost = cost;
+        this.weight = weight;
+        this.vehicle = vehicle;
+        this.company = company;
+        this.employee = employee;
     }
 
     //Getters
