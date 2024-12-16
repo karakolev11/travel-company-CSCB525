@@ -1,13 +1,11 @@
 package org.example;
 
 import org.example.configuration.SessionFactoryUtil;
-import org.example.dao.ClientDao;
+import org.example.dao.*;
 //import org.example.dao.CompanyDao;
-import org.example.dao.CompanyDao;
-import org.example.dao.EmployeeDao;
-import org.example.dao.VehicleDao;
 import org.example.dto.Client.CreateClientDto;
 import org.example.dto.Client.UpdateClientDto;
+import org.example.dto.CompanyRoutesDto;
 import org.example.dto.Employee.CreateEmployeeDto;
 import org.example.dto.Vehicle.CreateVehicleDto;
 import org.example.dto.Vehicle.UpdateVehicleDto;
@@ -102,5 +100,11 @@ public class Main {
 //        List<Employee> employee = EmployeeDao.getAllEmployees();
 //        System.out.println(employee);
         //END TEST EMPLOYEE
+
+        //TEST REPORTS
+//        List<CompanyRoutesDto> companyRoutesDto = ReportsDao.getRoutesCountPerCompany();
+//        System.out.println(companyRoutesDto);
+        ReportsDao.showRoutesPerCompany();
+        //END TEST REPORTS
     }
 }
