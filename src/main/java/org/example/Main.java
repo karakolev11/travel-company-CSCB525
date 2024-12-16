@@ -105,6 +105,7 @@ public class Main {
 //        List<CompanyRoutesDto> companyRoutesDto = ReportsDao.getRoutesCountPerCompany();
 //        System.out.println(companyRoutesDto);
         ReportsDao.showRoutesPerCompany();
+        ReportsDao.showRoutesCostPerCompany();
         //END TEST REPORTS
     }
 }

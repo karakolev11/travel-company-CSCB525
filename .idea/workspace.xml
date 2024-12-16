@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ac79159-c5c8-4237-a706-0d529dc9fd37" name="Changes" comment="Create first report with dto and methods">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/dao/RouteDaoTest.java" afterDir="false" />
+    <list default="true" id="5ac79159-c5c8-4237-a706-0d529dc9fd37" name="Changes" comment="RouteDao test">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/CompanyRoutesCostDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/ReportsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/ReportsDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +101,7 @@
     "Gradle.EmployeeDaoTest.executor": "Run",
     "Gradle.EmployeeDaoTest.whenCategoryIsMissing_thenAssertConstraintViolation.executor": "Run",
     "Gradle.EmployeeDaoTest.whenSalaryIsMissing_thenAssertConstraintViolation.executor": "Run",
+    "Gradle.RouteDaoTest.executor": "Run",
     "Gradle.VehicleDaoTest.executor": "Run",
     "Gradle.VehicleDaoTest.whenInvalidVehiclePlate_plateMissing_thenAssertConstraintViolation.executor": "Run",
     "Gradle.VehicleDaoTest.whenVehicleCreatedWithDefaultConstructor_thenAssertConstraintViolation.executor": "Run",
@@ -118,30 +121,6 @@
   }
 }]]></component>
   <component name="RunManager">
-    <configuration name="ClientDaoTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;org.example.dao.ClientDaoTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
     <configuration name="ClientDaoTest.whenDebtIsNegative_thenAssertConstraintViolation" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -238,13 +217,37 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="RouteDaoTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.dao.RouteDaoTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.RouteDaoTest" />
         <item itemvalue="Gradle.EmployeeDaoTest" />
         <item itemvalue="Gradle.EmployeeDaoTest.whenSalaryIsMissing_thenAssertConstraintViolation" />
         <item itemvalue="Gradle.EmployeeDaoTest.whenCategoryIsMissing_thenAssertConstraintViolation" />
         <item itemvalue="Gradle.ClientDaoTest.whenDebtIsNegative_thenAssertConstraintViolation" />
-        <item itemvalue="Gradle.ClientDaoTest" />
       </list>
     </recent_temporary>
   </component>
@@ -377,7 +380,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734369012989</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="RouteDao test">
+      <option name="closed" value="true" />
+      <created>1734381568820</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1734381568820</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -406,6 +417,7 @@
     <MESSAGE value="Route Dao and Dto update" />
     <MESSAGE value="Sort Routes by destination" />
     <MESSAGE value="Create first report with dto and methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create first report with dto and methods" />
+    <MESSAGE value="RouteDao test" />
+    <option name="LAST_COMMIT_MESSAGE" value="RouteDao test" />
   </component>
 </project>
