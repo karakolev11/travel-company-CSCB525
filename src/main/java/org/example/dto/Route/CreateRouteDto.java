@@ -48,6 +48,9 @@ public class CreateRouteDto {
     @NotNull(message = "Route must be have at least one client")
     private Client client;
 
+    public CreateRouteDto() {
+    }
+
     public CreateRouteDto(
             String startingPoint,
             String destination,

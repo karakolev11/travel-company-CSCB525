@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ac79159-c5c8-4237-a706-0d529dc9fd37" name="Changes" comment="RouteDao test">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/CompanyRoutesCostDto.java" afterDir="false" />
+    <list default="true" id="5ac79159-c5c8-4237-a706-0d529dc9fd37" name="Changes" comment="Report all routes cost">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/configuration/FileUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/ReportsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/ReportsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/RouteDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/RouteDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -388,7 +387,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734381568820</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Report all routes cost">
+      <option name="closed" value="true" />
+      <created>1734383873332</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1734383873332</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -418,6 +425,7 @@
     <MESSAGE value="Sort Routes by destination" />
     <MESSAGE value="Create first report with dto and methods" />
     <MESSAGE value="RouteDao test" />
-    <option name="LAST_COMMIT_MESSAGE" value="RouteDao test" />
+    <MESSAGE value="Report all routes cost" />
+    <option name="LAST_COMMIT_MESSAGE" value="Report all routes cost" />
   </component>
 </project>
