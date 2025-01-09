@@ -28,6 +28,7 @@ public class FileUtils {
             e.printStackTrace();
         }
     }
+
     public static void loadFromFile(String file) {
         List<CreateRouteDto> routes = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {

@@ -12,8 +12,6 @@ public class SessionFactoryUtil {
     public static SessionFactory getSessionFactory() {
         if (sessionFactory == null) {
             Configuration configuration = new Configuration();
-//            configuration.addAnnotatedClass(Employee.class);
-//            ADD ANNOTATED CLASSES TO CONFIG
             configuration.addAnnotatedClass(Company.class);
             configuration.addAnnotatedClass(Employee.class);
             configuration.addAnnotatedClass(Client.class);
