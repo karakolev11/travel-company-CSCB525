@@ -3,10 +3,12 @@ package org.example.dao;
 import org.example.configuration.SessionFactoryUtil;
 import org.example.dto.CompanyRoutesCostDto;
 import org.example.dto.CompanyRoutesDto;
+import org.example.entity.Company;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.List;
 
 public class ReportsDao {
@@ -79,4 +81,32 @@ public class ReportsDao {
         System.out.println("Total cost: " + allCompaniesRouteCost);
     }
 
+    private static BigDecimal getRevenueForPeriod(long companyId, LocalDate startDate, LocalDate endDate) {
+        BigDecimal totalRevenue = BigDecimal.ZERO;
+        try (Session session = SessionFactoryUtil.getSessionFactory().openSession()) {
+            Transaction transaction = session.beginTransaction();
+
+            totalRevenue = (BigDecimal) session.createQuery(
+                            "SELECT SUM(r.cost) FROM route r " +
+                                    "left join r.company " +
+                                    "WHERE r.startDate >= :startDate " +
+                                    "AND r.deliveryDate <= :endDate " +
+                                    "AND r.company.id = :companyId " +
+                                    "AND r.deletedAt IS NULL")
+                    .setParameter("companyId", companyId)
+                    .setParameter("startDate", startDate)
+                    .setParameter("endDate", endDate)
+                    .getSingleResult();
+
+            transaction.commit();
+        }
+        return totalRevenue;
+    }
+
+    public static void showRevenueForPeriod(long companyId, LocalDate startDate, LocalDate endDate) {
+        Company company = CompanyDao.getCompanyById(companyId);
+        BigDecimal revenue = getRevenueForPeriod(companyId, startDate, endDate);
+
+        System.out.println("Total revenue for Company: " + company.getName() + " from " + startDate + " to " + endDate + " is " + revenue);
+    }
 }

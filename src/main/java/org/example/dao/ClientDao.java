@@ -35,7 +35,7 @@ public class ClientDao {
             Transaction transaction = session.beginTransaction();
             client = session.createQuery(
                             "SELECT c FROM client c " +
-                                    "join fetch c.routes " +
+                                    "left join fetch c.routes " +
                                     "WHERE c.id = :clientId " +
                                     "AND c.deletedAt IS NULL", Client.class)
                     .setParameter("clientId", clientId)

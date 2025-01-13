@@ -19,7 +19,7 @@ public class FileUtils {
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename))) {
             for (Route route : allRoutes) {
-                writer.write("Route " + (route.getId() + 1) + ":");
+                writer.write("Route " + (route.getId()) + ":");
                 writer.newLine();
                 writer.write(route.toString());
                 writer.newLine();

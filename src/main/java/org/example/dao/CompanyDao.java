@@ -23,6 +23,7 @@ public class CompanyDao {
             company.setName(createCompanyDto.getName());
             company.setDescription((createCompanyDto.getDescription()));
             company.setProfit(BigDecimal.ZERO);
+            company.setCreatedAt(LocalDate.now());
             session.save(company);
 
             transaction.commit();

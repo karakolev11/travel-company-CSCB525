@@ -44,7 +44,6 @@ public class Route extends BaseEntity {
     @Column(name = "cost", nullable = false)
     private BigDecimal cost;
 
-    @NotNull(message = "Weight must be set.")
     @PositiveOrZero(message = "Weight can't be negative number")
     @Column(name = "weight", nullable = true)
     private BigDecimal weight;

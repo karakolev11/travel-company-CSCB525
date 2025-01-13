@@ -36,6 +36,8 @@ public class RouteDao {
             route.setVehicle(createRouteDto.getVehicle());
             route.setClient(createRouteDto.getClient());
 
+            route.setCreatedAt(LocalDate.now());
+
             session.save(route);
             transaction.commit();
         }
@@ -158,31 +160,6 @@ public class RouteDao {
         return routes;
     }
 
-    //total number of routes
-    public static long getTotalRoutes() {
-        long totalRoutes = 0;
-        try (Session session = SessionFactoryUtil.getSessionFactory().openSession()) {
-            Transaction transaction = session.beginTransaction();
-            totalRoutes = (long) session.createQuery(
-                            "SELECT COUNT(*) FROM route WHERE deletedAt IS NULL")
-                    .getSingleResult();
-            transaction.commit();
-        }
-        return totalRoutes;
-    }
-
-    public static BigDecimal getTotalRevenue() {
-        BigDecimal totalRevenue = BigDecimal.ZERO;
-        try (Session session = SessionFactoryUtil.getSessionFactory().openSession()) {
-            Transaction transaction = session.beginTransaction();
-            totalRevenue = (BigDecimal) session.createQuery(
-                            "SELECT SUM(r.cost) FROM route r WHERE r.deletedAt IS NULL")
-                    .getSingleResult();
-            transaction.commit();
-        }
-        return totalRevenue;
-    }
-
     public static List<String> getRoutesByEmployee() {
         List<String> employeeRoutes = new ArrayList<>();
         try (Session session = SessionFactoryUtil.getSessionFactory().openSession()) {
@@ -230,22 +207,4 @@ public class RouteDao {
         return employeeRevenueList;
     }
 
-    public static BigDecimal getRevenueForPeriod(LocalDate startDate, LocalDate endDate) {
-        BigDecimal totalRevenue = BigDecimal.ZERO;
-        try (Session session = SessionFactoryUtil.getSessionFactory().openSession()) {
-            Transaction transaction = session.beginTransaction();
-
-            totalRevenue = (BigDecimal) session.createQuery(
-                            "SELECT SUM(r.cost) FROM route r " +
-                                    "WHERE r.startDate >= :startDate " +
-                                    "AND r.deliveryDate <= :endDate " +
-                                    "AND r.deletedAt IS NULL")
-                    .setParameter("startDate", startDate)
-                    .setParameter("endDate", endDate)
-                    .getSingleResult();
-
-            transaction.commit();
-        }
-        return totalRevenue;
-    }
 }

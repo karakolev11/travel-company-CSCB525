@@ -19,7 +19,6 @@ public class EmployeeSortAndFilterDao {
                     .createQuery(
                             "SELECT e FROM employee e " +
                                     "join fetch e.company " +
-                                    "join fetch e.vehicles " +
                                     "join fetch e.routes " +
                                     "WHERE e.deletedAt IS NULL " +
                                     "ORDER BY e.salary " + sort, Employee.class)
@@ -29,7 +28,7 @@ public class EmployeeSortAndFilterDao {
         return employees;
     }
 
-    public static List<Employee> showCEmployeesWithSalaryGreaterThan(BigDecimal salary) {
+    public static List<Employee> showEmployeesWithSalaryGreaterThan(BigDecimal salary) {
         List<Employee> employees;
         try(Session session = SessionFactoryUtil.getSessionFactory().openSession()) {
             Transaction transaction = session.beginTransaction();
@@ -67,7 +66,7 @@ public class EmployeeSortAndFilterDao {
         return employees;
     }
 
-    public static List<Employee> sortEmployeeByCategoryAlphabetically(Category category) {
+    public static List<Employee> sortEmployeeByCategoryAlphabetically() {
         List<Employee> employees;
         try(Session session = SessionFactoryUtil.getSessionFactory().openSession()) {
             Transaction transaction = session.beginTransaction();
@@ -75,7 +74,6 @@ public class EmployeeSortAndFilterDao {
                     .createQuery(
                             "SELECT e FROM employee e " +
                                     "join fetch e.company " +
-                                    "join fetch e.vehicles " +
                                     "join fetch e.routes " +
                                     "WHERE e.deletedAt IS NULL " +
                                     "ORDER BY e.category ASC" , Employee.class)

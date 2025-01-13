@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ac79159-c5c8-4237-a706-0d529dc9fd37" name="Changes" comment="Final commit" />
+    <list default="true" id="5ac79159-c5c8-4237-a706-0d529dc9fd37" name="Changes" comment="Final commit">
+      <change afterPath="$PROJECT_DIR$/predefinedRoutes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/configuration/FileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/configuration/FileUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/ClientDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/ClientDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/CompanyDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/CompanyDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/EmployeeSortAndFilterDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/EmployeeSortAndFilterDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/ReportsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/ReportsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/RouteDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/RouteDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/Employee/CreateEmployeeDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/Employee/CreateEmployeeDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/entity/Route.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/entity/Route.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,64 +69,64 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "karakolev11"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;karakolev11&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/karakolev11/travel-company-CSCB525.git",
-    "accountId": "789a9a35-136a-453e-97a0-ca5822cab5b9"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/karakolev11/travel-company-CSCB525.git&quot;,
+    &quot;accountId&quot;: &quot;789a9a35-136a-453e-97a0-ca5822cab5b9&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 2
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2q5LihrRGpG4S4rveaL4cM9z2lR" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build travel-company-CSCB525.executor": "Run",
-    "Gradle.ClientDaoTest.executor": "Run",
-    "Gradle.ClientDaoTest.whenDebtIsNegative_thenAssertConstraintViolation.executor": "Run",
-    "Gradle.ClientDaoTest.whenInvalidClientName_firstLetterNotCapital_thenAssertConstraintViolation.executor": "Run",
-    "Gradle.ClientDaoTest.whenInvalidClientName_nameMissing_thenAssertConstraintViolation.executor": "Run",
-    "Gradle.CompanyDaoTest.executor": "Run",
-    "Gradle.CompanyDaoTest.invalidCompanyName_assertConstraintViolation.executor": "Run",
-    "Gradle.CompanyDaoTest.invalidCompanyName_firstLetterNotCapital_thenAssertConstraintViolation.executor": "Run",
-    "Gradle.CompanyDaoTest.invalidCompanyName_nameMissing_thenAssertConstraintViolation.executor": "Run",
-    "Gradle.CompanyDaoTest.whenDescriptionMissing_thenAssertConstraintViolation.executor": "Run",
-    "Gradle.CompanyDaoTest.whenInvalidCompanyName_nameIsEmptyString_thenAssertConstraintViolation.executor": "Run",
-    "Gradle.CompanyDaoTest.whenInvalidCompanyName_nameMissing_thenAssertConstraintViolation.executor": "Run",
-    "Gradle.CompanyDaoTest.whenProfitIsNegative_thenAssertConstraintViolation.executor": "Run",
-    "Gradle.EmployeeDaoTest.executor": "Run",
-    "Gradle.EmployeeDaoTest.whenCategoryIsMissing_thenAssertConstraintViolation.executor": "Run",
-    "Gradle.EmployeeDaoTest.whenSalaryIsMissing_thenAssertConstraintViolation.executor": "Run",
-    "Gradle.RouteDaoTest.executor": "Run",
-    "Gradle.VehicleDaoTest.executor": "Run",
-    "Gradle.VehicleDaoTest.whenInvalidVehiclePlate_plateMissing_thenAssertConstraintViolation.executor": "Run",
-    "Gradle.VehicleDaoTest.whenVehicleCreatedWithDefaultConstructor_thenAssertConstraintViolation.executor": "Run",
-    "Gradle.VehicleDaoTest.whenVehicleNotAssignedToCompany_thenAssertConstraintViolation.executor": "Run",
-    "Gradle.VehicleDaoTest.whenVehicleTypeMissing_thenAssertConstraintViolation.executor": "Run",
-    "Gradle.travel-company-CSCB525 [:org.example.Main.main()].executor": "Run",
-    "JUnit.org.example in travel-company-CSCB525.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/lewsk/IdeaProjects/cscb525f2024Company_Week9_Validation_Tests",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Build travel-company-CSCB525.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ClientDaoTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ClientDaoTest.whenDebtIsNegative_thenAssertConstraintViolation.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ClientDaoTest.whenInvalidClientName_firstLetterNotCapital_thenAssertConstraintViolation.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.ClientDaoTest.whenInvalidClientName_nameMissing_thenAssertConstraintViolation.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CompanyDaoTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CompanyDaoTest.invalidCompanyName_assertConstraintViolation.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CompanyDaoTest.invalidCompanyName_firstLetterNotCapital_thenAssertConstraintViolation.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CompanyDaoTest.invalidCompanyName_nameMissing_thenAssertConstraintViolation.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CompanyDaoTest.whenDescriptionMissing_thenAssertConstraintViolation.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CompanyDaoTest.whenInvalidCompanyName_nameIsEmptyString_thenAssertConstraintViolation.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CompanyDaoTest.whenInvalidCompanyName_nameMissing_thenAssertConstraintViolation.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CompanyDaoTest.whenProfitIsNegative_thenAssertConstraintViolation.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.EmployeeDaoTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.EmployeeDaoTest.whenCategoryIsMissing_thenAssertConstraintViolation.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.EmployeeDaoTest.whenSalaryIsMissing_thenAssertConstraintViolation.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RouteDaoTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.VehicleDaoTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.VehicleDaoTest.whenInvalidVehiclePlate_plateMissing_thenAssertConstraintViolation.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.VehicleDaoTest.whenVehicleCreatedWithDefaultConstructor_thenAssertConstraintViolation.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.VehicleDaoTest.whenVehicleNotAssignedToCompany_thenAssertConstraintViolation.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.VehicleDaoTest.whenVehicleTypeMissing_thenAssertConstraintViolation.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.travel-company-CSCB525 [:org.example.Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.org.example in travel-company-CSCB525.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/lewsk/IdeaProjects/cscb525f2024Company_Week9_Validation_Tests&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="ClientDaoTest.whenDebtIsNegative_thenAssertConstraintViolation" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -399,7 +411,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736442411821</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Final commit">
+      <option name="closed" value="true" />
+      <created>1736442787043</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1736442787043</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
